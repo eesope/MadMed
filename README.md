@@ -17,11 +17,39 @@ This made us confusing and mad sometimes. 🤯 I built this app to reduce unnece
     npx expo start
    ```
 
+## File tree
+```bash
+MadMed
+├── app
+│   ├── (tabs)
+│   ├── +not-found.tsx
+│   └── _layout.tsx
+├── app.json
+├── assets
+├── components
+│   ├── __tests__
+│   └── ui
+├── constants
+├── expo-env.d.ts
+├── hooks
+├── node_modules
+├── package-lock.json
+├── package.json
+├── scripts
+└── tsconfig.json
+```
+
 ## Tech stack
-- TypeScript
-- React native library
-- Expo framework
-- Tailwind CSS 
+- [TypeScript](https://www.typescriptlang.org)
+- [React native; JS framework](https://reactnative.dev/docs/typescript)
+- [Expo; RN framework](https://docs.expo.dev)
+- [Tailwind CSS]() 
+
+## Known bugs
+
+
+## Further tasks
+
 
 ## Get a fresh project
 

@@ -5,6 +5,8 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { Drawer } from 'expo-router/drawer';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 
@@ -29,6 +31,33 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Drawer>
+        <Drawer.Screen
+          name="(tabs)/index" // name of the page and must match the url from root
+          options={{
+            drawerLabel: 'Home',
+            title: 'overview',
+          }}
+        />
+        <Drawer.Screen
+          name="user/[id]"
+          options={{
+            drawerLabel: 'User',
+            title: 'overview',
+          }}
+        />
+      </Drawer>
+        <Drawer.Screen
+          name="(tabs)/support"
+          options={{
+            drawerLabel: 'Support',
+            title: 'overview',
+          }}
+        />
+    </GestureHandlerRootView>
+
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
