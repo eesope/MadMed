@@ -1,6 +1,5 @@
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
@@ -13,6 +12,7 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
+// Top level navigator 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
@@ -35,34 +35,30 @@ export default function RootLayout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer>
         <Drawer.Screen
-          name="(tabs)/index" // name of the page and must match the url from root
+          name="(tabs)" // name of the page in the drawer(app)
           options={{
             drawerLabel: 'Home',
-            title: 'overview',
+            title: 'MadMed',
           }}
         />
+
         <Drawer.Screen
-          name="user/[id]"
+          name="support"
           options={{
-            drawerLabel: 'User',
-            title: 'overview',
+            drawerLabel: 'Support',
+            title: 'Support',
+          }}
+        />
+
+        <Drawer.Screen
+          name="+not-found"
+          options={{
+            drawerItemStyle: { display: 'none' },
           }}
         />
       </Drawer>
-        <Drawer.Screen
-          name="(tabs)/support"
-          options={{
-            drawerLabel: 'Support',
-            title: 'overview',
-          }}
-        />
     </GestureHandlerRootView>
-
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
+      <StatusBar style="auto" /> 
     </ThemeProvider>
   );
 }

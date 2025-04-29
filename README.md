@@ -20,23 +20,18 @@ This made us confusing and mad sometimes. 🤯 I built this app to reduce unnece
 ## File tree
 ```bash
 MadMed
-├── app
-│   ├── (tabs)
-│   ├── +not-found.tsx
-│   └── _layout.tsx
-├── app.json
+├── app ・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・ main layout and pages
+├── app.json ・・・・・・・・・・・・・・・・・・・・ configuration of Expo project   
 ├── assets
-├── components
-│   ├── __tests__
-│   └── ui
+├── components ・・・・・・・・・・・・・・・・・ reusable UI components
 ├── constants
-├── expo-env.d.ts
+├── expo-env.d.ts ・・・・・・・・・・・ types for typescript
 ├── hooks
 ├── node_modules
 ├── package-lock.json
 ├── package.json
 ├── scripts
-└── tsconfig.json
+└── tsconfig.json ・・・・・・・・・・・・・ compiler configuration for typescript
 ```
 
 ## Tech stack
