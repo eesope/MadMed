@@ -1,6 +1,7 @@
-# Welcome to your Expo app 👋
-
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# MadMed
+I need to give medication to my 13-year-old cat Domingo every 12 hours. My partner and I were keep asking each other "Have you give him the med?"
+We sometimes take care of neighbour's furry friends. And some of them take medication. We ask each other same questions every morning and evening.
+This made us confusing and mad sometimes. 🤯 I built this app to reduce unnecessary check-up ping-pong in my pacific zoo. 
 
 ## Get started
 
@@ -13,17 +14,37 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 2. Start the app
 
    ```bash
-   npx expo start
+    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## File tree
+```bash
+MadMed
+├── app ・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・ main layout and pages
+├── app.json ・・・・・・・・・・・・・・・・・・・・ configuration of Expo project   
+├── assets
+├── components ・・・・・・・・・・・・・・・・・ reusable UI components
+├── constants
+├── expo-env.d.ts ・・・・・・・・・・・ types for typescript
+├── hooks
+├── node_modules
+├── package-lock.json
+├── package.json
+├── scripts
+└── tsconfig.json ・・・・・・・・・・・・・ compiler configuration for typescript
+```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Tech stack
+- [TypeScript](https://www.typescriptlang.org)
+- [React native; JS framework](https://reactnative.dev/docs/typescript)
+- [Expo; RN framework](https://docs.expo.dev)
+- [Tailwind CSS]() 
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Known bugs
+
+
+## Further tasks
+
 
 ## Get a fresh project
 
@@ -35,16 +56,4 @@ npm run reset-project
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+🩻 `npx expo-doctor` helps.

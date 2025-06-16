@@ -1,19 +1,17 @@
+import { StyleSheet } from 'react-native';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { Stack } from 'expo-router';
-import { StyleSheet } from 'react-native';
 
-export default function HomeScreen() {
+export default function TabTwoScreen() {
   return (
     <>
-            <Stack.Screen options={{ title: 'Home' }} />
+      <Stack.Screen options={{ title: 'More' }} />
       <ThemedView style={styles.container}>
-        <ThemedText type="title">Hi NAME!</ThemedText>
+        <ThemedText type="title">More page</ThemedText>
 
       </ThemedView>
-
     </>
-  
   );
 }
 
@@ -29,4 +27,3 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
   },
 });
-

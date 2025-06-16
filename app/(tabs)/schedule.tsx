@@ -1,19 +1,17 @@
+import { StyleSheet } from 'react-native';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { Stack } from 'expo-router';
-import { StyleSheet } from 'react-native';
 
-export default function HomeScreen() {
+export default function Schedule() {
   return (
     <>
-            <Stack.Screen options={{ title: 'Home' }} />
+      <Stack.Screen options={{ title: 'Schedule' }} />
       <ThemedView style={styles.container}>
-        <ThemedText type="title">Hi NAME!</ThemedText>
+        <ThemedText type="title">Edit Schedule</ThemedText>
 
       </ThemedView>
-
     </>
-  
   );
 }
 
@@ -29,4 +27,3 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
   },
 });
-
