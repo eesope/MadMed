@@ -1,15 +1,25 @@
+import React from 'react';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { Stack } from 'expo-router';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Button, Alert } from 'react-native';
+import { useRouter } from 'expo-router';
 
 export default function HomeScreen() {
+  const router = useRouter();
+
   return (
     <>
-            <Stack.Screen options={{ title: 'Home' }} />
+      <Stack.Screen options={{ title: 'Home' }} />
+      
       <ThemedView style={styles.container}>
-        <ThemedText type="title">Hi NAME!</ThemedText>
 
+      <ThemedText type="title" >Hi NAME!</ThemedText>
+
+        <Button
+          onPress={() => router.push('/addPet')} 
+          title="Add a pet" color="#158480" 
+          accessibilityLabel="Button for add a pet"/>
       </ThemedView>
 
     </>

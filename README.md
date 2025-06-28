@@ -39,6 +39,7 @@ MadMed
 - [React native; JS framework](https://reactnative.dev/docs/typescript)
 - [Expo; RN framework](https://docs.expo.dev)
 - [Tailwind CSS]() 
+- Expo Router for routing, navigation
 
 ## Known bugs
 
